@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Details({ cat }) {
+function Details() {
   console.log('render Details');
 
   return (
     <div>
       <h2>Cat Details</h2>
-      <p>{ cat }</p>
+      <p>{ window.store.getState().selectedCat }</p>
     </div>
   )
 }

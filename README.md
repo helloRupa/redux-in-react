@@ -36,6 +36,8 @@ DOM is greedy! Bad DOM, bad!
 ## Install Redux in your app
 From the root folder: `npm install --save redux`
 
+In index.js: `import { createStore } from 'redux';`
+
 ## Create the store and stub out the reducer
 No reducer, no store!
 

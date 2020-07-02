@@ -1,5 +1,23 @@
 import React, { Component } from 'react';
 
+const addCat = cat => ({
+  type: 'ADD_CAT',
+  cat
+});
+
+const dispatchAddCat = cat => {
+  window.store.dispatch(addCat(cat));
+};
+
+const selectCat = cat => ({
+  type: 'SELECT_CAT',
+  cat
+});
+
+const dispatchSelectCat = cat => {
+  window.store.dispatch(selectCat(cat));
+};
+
 class Form extends Component {
   constructor(props) {
     super(props);
@@ -15,7 +33,9 @@ class Form extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.addCat(this.state.newCat);
+    // this.props.addCat(this.state.newCat);
+    dispatchAddCat(this.state.newCat);
+    dispatchSelectCat(this.state.newCat);
     this.setState({newCat: ''});
   }
 

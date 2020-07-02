@@ -13,6 +13,12 @@ class CatPage extends Component {
     }
   }
 
+  componentDidMount() {
+    window.store.subscribe(() => {
+      this.forceUpdate();
+    })
+  }
+
   selectCat = (cat) => {
     this.setState({ selectedCat: cat });
   }
