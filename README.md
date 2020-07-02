@@ -63,8 +63,6 @@ This will be the second argument to createStore():
 ## Update Components that read from state
 To work with the state stored inside the store
 
-We can either update everything all of the time or only when certain changes happen. We'll see how to do it both ways, and then discuss the benefits of each. In the future (being tomorrow), we'll see how react-redux takes care of this work for us.
-
 ## Add the ability to add a cat via Redux
 You will need:
 - action/s
@@ -72,6 +70,8 @@ You will need:
 - to update components
     - actions must be dispatched
     - components must be re-rendered
+
+We can either re-render everything all of the time or only when certain changes happen. We'll see how to do it both ways, and then discuss the benefits of each. In the future (being tomorrow), we'll see how react-redux takes care of this work for us.
 
 ## Add the ability to select a cat via Redux
 Only existing cats should be selectable. Also, when a new cat is added via the form, that new cat should be selected.
@@ -82,6 +82,8 @@ You will need:
 - to update components
     - actions must be dispatched
     - components must be re-rendered
+
+Need to deal with re-renders again.
 
 ## Restructure your code
 Right now, everything is in one file. Let's reorganize!
