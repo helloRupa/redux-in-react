@@ -110,4 +110,5 @@ Let's try adding hedgehogs to our app!
 4. Update any Components relying on reading state to use the state in the store
 5. Subscribe those components to the store and provide a callback that forces the Component to update
 6. Create actions that serve as requests to modify the state in the store
-7. Update any Components that modify state to dispatch those actions
+7. Update reducers to respond to actions
+8. Update any Components that modify state to dispatch those actions
