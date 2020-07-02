@@ -63,6 +63,8 @@ This will be the second argument to createStore():
 ## Update Components that read from state
 To work with the state stored inside the store
 
+We can either update everything all of the time or only when certain changes happen. We'll see how to do it both ways, and then discuss the benefits of each. In the future (being tomorrow), we'll see how react-redux takes care of this work for us.
+
 ## Add the ability to add a cat via Redux
 You will need:
 - action/s
