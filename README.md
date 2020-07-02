@@ -33,6 +33,14 @@ DOM is greedy! Bad DOM, bad!
 - Add actions to dispatch to the restore, which will be handled by the reducer
 - Update our components to work with the store instead of props
 
+## Don't forget the puzzle pieces in our jigsaw!
+- createStore()
+- getState()
+- dispatch()
+- reducers
+- actions and action creators
+- subscribe()
+
 ## Install Redux in your app
 From the root folder: `npm install --save redux`
 
