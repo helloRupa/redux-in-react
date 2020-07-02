@@ -4,31 +4,31 @@ import Menu from './Menu';
 import Form from './Form';
 
 class CatPage extends Component {
-  constructor() {
-    super();
+  // constructor() {
+  //   super();
 
-    this.state = {
-      cats: ['Meowser', 'Charlie', 'Fluffanilla'],
-      selectedCat: 'Meowser'
-    }
-  }
+    // this.state = {
+    //   cats: ['Meowser', 'Charlie', 'Fluffanilla'],
+    //   selectedCat: 'Meowser'
+    // }
+  // }
 
-  componentDidMount() {
-    window.store.subscribe(() => {
-      this.forceUpdate();
-    })
-  }
+  // componentDidMount() {
+  //   window.store.subscribe(() => {
+  //     this.forceUpdate();
+  //   });
+  // }
 
-  selectCat = (cat) => {
-    this.setState({ selectedCat: cat });
-  }
+  // selectCat = (cat) => {
+  //   this.setState({ selectedCat: cat });
+  // }
 
-  addCat = (cat) => {
-    this.setState({
-      cats: [...this.state.cats, cat],
-      selectedCat: cat
-    });
-  }
+  // addCat = (cat) => {
+  //   this.setState({
+  //     cats: [...this.state.cats, cat],
+  //     selectedCat: cat
+  //   });
+  // }
 
   render() {
     console.log('rendering CatPage');
@@ -36,9 +36,9 @@ class CatPage extends Component {
     return (
       <>
         <h1>Cat Page</h1>
-        <Menu cats={this.state.cats} selectCat={this.selectCat} />
-        <Details cat={this.state.selectedCat} />
-        <Form addCat={this.addCat} />
+        <Menu />
+        <Details />
+        <Form />
       </>
     )
   }

@@ -1,18 +1,10 @@
 import React, { Component } from 'react';
+import { addCat, selectCat } from './actions/catActions';
 
-const addCat = cat => ({
-  type: 'ADD_CAT',
-  cat
-});
 
 const dispatchAddCat = cat => {
   window.store.dispatch(addCat(cat));
 };
-
-const selectCat = cat => ({
-  type: 'SELECT_CAT',
-  cat
-});
 
 const dispatchSelectCat = cat => {
   window.store.dispatch(selectCat(cat));

@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Details() {
-  console.log('render Details');
+class Details extends Component {
 
-  return (
-    <div>
-      <h2>Cat Details</h2>
-      <p>{ window.store.getState().selectedCat }</p>
-    </div>
-  )
+  componentDidMount() {
+    window.store.subscribe(() => { this.forceUpdate(); });
+  }
+
+  render() {
+    console.log('render Details');
+
+    return (
+      <div>
+        <h2>Cat Details</h2>
+        <p>{ window.store.getState().selectedCat }</p>
+      </div>
+    )
+  }
 }
 
 export default Details;
