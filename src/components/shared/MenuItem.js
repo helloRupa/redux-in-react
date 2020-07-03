@@ -1,15 +1,15 @@
 import React from 'react';
 
-function MenuItem({ catName, selectCat }) {
+function MenuItem({ name, select }) {
 
   console.log('render MenuItem');
   
   const handleClick = e => {
-    selectCat(e.target.textContent);
+    select(e.target.textContent);
   };
 
   return (
-    <div onClick={ handleClick }>{catName}</div>
+    <div onClick={ handleClick }>{name}</div>
   )
 }
 

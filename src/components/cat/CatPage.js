@@ -1,47 +1,32 @@
-import React, { Component } from 'react';
-import Details from './Details';
-import Menu from './Menu';
-import Form from './Form';
+import React from 'react';
+import Details from '../shared/Details';
+import Menu from '../shared/Menu';
+import Form from '../shared/Form';
+import { addCat, selectCat } from '../../actions/catActions';
 
-class CatPage extends Component {
-  // constructor() {
-  //   super();
+const getCat = () => window.store.getState().cat.selectedCat;
+const getCats = () => window.store.getState().cat.cats;
 
-    // this.state = {
-    //   cats: ['Meowser', 'Charlie', 'Fluffanilla'],
-    //   selectedCat: 'Meowser'
-    // }
-  // }
+const dispatchAddCat = cat => {
+  window.store.dispatch(addCat(cat));
+};
 
-  // componentDidMount() {
-  //   window.store.subscribe(() => {
-  //     this.forceUpdate();
-  //   });
-  // }
+const dispatchSelectCat = cat => {
+  window.store.dispatch(selectCat(cat));
+};
 
-  // selectCat = (cat) => {
-  //   this.setState({ selectedCat: cat });
-  // }
+function CatPage() {
 
-  // addCat = (cat) => {
-  //   this.setState({
-  //     cats: [...this.state.cats, cat],
-  //     selectedCat: cat
-  //   });
-  // }
-
-  render() {
     console.log('rendering CatPage');
 
     return (
       <>
         <h1>Cat Page</h1>
-        <Menu />
-        <Details />
-        <Form />
+        <Menu getItems={getCats} animal={'Cat'} select={dispatchSelectCat} />
+        <Details getItem={getCat} animal={'Cat'} />
+        <Form add={dispatchAddCat} select={dispatchSelectCat} animal={'Cat'} />
       </>
-    )
-  }
+    );
 }
 
 export default CatPage;
