@@ -6,26 +6,30 @@ const dispatchSelectCat = cat => {
   window.store.dispatch(selectCat(cat));
 };
 
+const getCatsLength = () => window.store.getState().cat.cats.length;
+
 class Menu extends Component {
   constructor() {
     super();
 
     this.state = {
-      prevCats: window.store.getState().cats
+      prevCats: getCatsLength()
     }
   }
 
   componentDidMount() {
     window.store.subscribe(() => {
-      if (this.state.prevCats.length !== window.store.getState().cats.length) {
-        this.setState({ prevCats: window.store.getState().cats.length });
+      const storeCatLength = getCatsLength();
+
+      if (this.state.prevCats !== storeCatLength) {
+        this.setState({ prevCats: storeCatLength });
       }
     });
   }
   
   render() {
     console.log('render Menu');
-    const cats = window.store.getState().cats;
+    const cats = window.store.getState().cat.cats;
 
     return (
       <nav>

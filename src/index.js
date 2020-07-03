@@ -2,10 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import catReducer from './reducers/catReducer';
+import peacockReducer from './reducers/peacockReducer';
 
-const store = createStore(catReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const rootReducer = combineReducers({
+  cat: catReducer,
+  peacock: peacockReducer
+});
+
+const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 window.store = store;
 
 ReactDOM.render(

@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 
-const getCat = () => window.store.getState().cat.selectedCat;
+const getPeacock = () => window.store.getState().peacock.selectedPeacock;
 
 class Details extends Component {
   constructor() {
     super();
 
     this.state = {
-      selectedCat: getCat()
+      selectedPeacock: getPeacock()
     }
   }
 
   componentDidMount() {
     window.store.subscribe(() => { 
-      const storeCat = getCat();
+      const storePeacock = getPeacock();
 
-      if (storeCat !== this.state.selectedCat) {
-        this.setState({ selectedCat: storeCat });
+      if (storePeacock !== this.state.selectedPeacock) {
+        this.setState({ selectedPeacock: storePeacock });
       }
     });
   }
@@ -26,8 +26,8 @@ class Details extends Component {
 
     return (
       <div>
-        <h2>Cat Details</h2>
-        <p>{ getCat() }</p>
+        <h2>Peacock Details</h2>
+        <p>{ getPeacock() }</p>
       </div>
     )
   }
