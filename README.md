@@ -109,6 +109,8 @@ Don't forget to export!
 ## BONUS: add another reducer for a new slice of state (combineReducers())
 Let's try adding peacocks to our app!
 
+If there's extra time and we have peacocks, we might be able to tread into the world of HOCs.
+
 ## Redux Checklist:
 1. Install Redux in your app
 2. Create the store
