@@ -104,8 +104,8 @@ We'll be organizing by function:
 
 Don't forget to export!
 
-## BONUS: add another reducer for a new slice of state
-Let's try adding hedgehogs to our app!
+## BONUS: add another reducer for a new slice of state (combineReducers())
+Let's try adding peacocks to our app!
 
 ## Redux Checklist:
 1. Install Redux in your app
