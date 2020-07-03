@@ -33,6 +33,16 @@ DOM is greedy! Bad DOM, bad!
 - Add actions to dispatch to the restore, which will be handled by the reducer
 - Update our components to work with the store instead of props
 
+## Don't forget the puzzle pieces in our jigsaw!
+- createStore()
+- getState()
+- dispatch()
+- reducers
+- actions and action creators
+- subscribe()
+
+![](redux-cycle.png)
+
 ## Install Redux in your app
 From the root folder: `npm install --save redux`
 
@@ -96,8 +106,8 @@ We'll be organizing by function:
 
 Don't forget to export!
 
-## BONUS: add another reducer for a new slice of state
-Let's try adding hedgehogs to our app!
+## BONUS: add another reducer for a new slice of state (combineReducers())
+Let's try adding peacocks to our app!
 
 ## Redux Checklist:
 1. Install Redux in your app
