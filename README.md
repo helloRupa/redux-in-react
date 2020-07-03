@@ -1,6 +1,10 @@
 # Add Redux to React
 Let's give React a break and have Redux handle our state.
 
+To see all of the solution branches in full:
+- [Redux Added](https://github.com/helloRupa/redux-in-react/tree/redux)
+- [Peacocks Added](https://github.com/helloRupa/redux-in-react/tree/peacock)
+
 ## By the end of this lesson, you should be able to:
 Add Redux to a React app for state management! 
 
