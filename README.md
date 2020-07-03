@@ -41,6 +41,8 @@ DOM is greedy! Bad DOM, bad!
 - actions and action creators
 - subscribe()
 
+![](redux-cycle.png)
+
 ## Install Redux in your app
 From the root folder: `npm install --save redux`
 
