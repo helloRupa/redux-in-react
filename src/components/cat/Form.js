@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { addCat, selectCat } from './actions/catActions';
+import { addCat, selectCat } from '../../actions/catActions';
 
 
 const dispatchAddCat = cat => {

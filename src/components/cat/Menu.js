@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MenuItem from './MenuItem';
-import { selectCat } from './actions/catActions';
+import { selectCat } from '../../actions/catActions';
 
 const dispatchSelectCat = cat => {
   window.store.dispatch(selectCat(cat));
