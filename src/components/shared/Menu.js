@@ -6,16 +6,16 @@ class Menu extends Component {
     super(props);
 
     this.state = {
-      prevLength: this.props.getItems().length
+      prevItems: this.props.getItems()
     }
   }
 
   componentDidMount() {
     window.store.subscribe(() => {
-      const storeLength = this.props.getItems().length;
+      const storeItems = this.props.getItems();
 
-      if (this.state.prevLength !== storeLength) {
-        this.setState({ prevLength: storeLength });
+      if (this.state.prevItems !== storeItems) {
+        this.setState({ prevItems: storeItems });
       }
     });
   }
