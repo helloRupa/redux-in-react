@@ -17,8 +17,8 @@ class Menu extends Component {
 
   componentDidMount() {
     window.store.subscribe(() => {
-      if (this.state.prevCats.length !== window.store.getState().cats.length) {
-        this.setState({ prevCats: window.store.getState().cats.length });
+      if (this.state.prevCats !== window.store.getState().cats) {
+        this.setState({ prevCats: window.store.getState().cats });
       }
     });
   }
